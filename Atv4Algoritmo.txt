@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int passos, total = 0, horas = 0;
+
+    while (total < 10000) {
+        horas++;
+        printf("Passos dados na hora %d: ", horas);
+        scanf("%d", &passos);
+
+        if (passos < 0) {
+            printf("Valor invalido! Digite um numero maior ou igual a 0.\n");
+            horas--;
+        } else {
+            total += passos;
+            printf("Total acumulado: %d\n", total);
+        }
+    }
+
+    printf("\nMeta atingida! Foram necessarias %d hora(s).\n", horas);
+    printf("Total de passos: %d\n", total);
+
+    return 0;
+}
