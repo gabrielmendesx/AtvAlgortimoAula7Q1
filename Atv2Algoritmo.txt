@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    
+    float total = 0;
+    
+    int opcao;
+    
+    do {
+        printf("\n--- Cofre digital ---\n");
+        printf("1 - adiionar R$ 0,50\n");
+        printf("2 - adiionar R$ 1,00\n");
+        printf("3 - adiionar R$2,00\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+        
+        switch (opcao) {
+            case 1:
+                total += 0.50;
+                break;
+            case 2:
+                total += 1.00;
+                break;
+            case 3:
+                total += 2.00;
+                break;
+            case 0:
+                break;
+            default:
+               printf("Opção Invalida!\n---");
+        }
+        
+        
+        if (opcao >= 1 && opcao <= 3) {
+            printf("Saldo parcial: R$%.2f\n", total);
+        }
+
+    } while (opcao != 0);
+
+    printf("\nTotal acumulado: R$%.2f\n", total);
+    
+
+    return 0;
+}
